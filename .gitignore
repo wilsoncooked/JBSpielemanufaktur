@@ -1,2 +1,8 @@
 /node_modules
 /.svelte-kit
+.eslint.cjs
+
+.DS_Store
+
+.prettierrc.json
+.prettierignore
