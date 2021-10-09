@@ -1,12 +1,22 @@
 <script lang="ts">
   import Section from '$lib/components/section.svelte'
   import { SerializedPrismicDOM } from '$lib/utils/helpers'
+  import ArrowDown from './svg/arrowDown.svelte'
+  import * as animateScroll from 'svelte-scrollto'
+
   export let contentHome
+
+  let animateArrow = false
+  const animationTiming = () => {
+    setTimeout(() => {
+      animateArrow = true
+    }, 5000)
+  }
 </script>
 
 <Section id="">
   {#if contentHome}
-    <div class="h-screen pt-48">
+    <div class="h-screen pt-48 relative">
       <span class="hidden">
         {@html SerializedPrismicDOM(contentHome.data.company_name)}
       </span>
@@ -25,6 +35,13 @@
           </div>
         </div>
       </div>
+      <div class="absolute flex justify-center w-full bottom-20">
+        <a
+          href="#about"
+          on:click={() => animateScroll.scrollTo({ element: `#about` })}
+          class={`${animateArrow ? 'animate-bouncing' : ''}`}><ArrowDown /></a
+        >
+      </div>
     </div>
-  {/if}
+  {/if} d
 </Section>

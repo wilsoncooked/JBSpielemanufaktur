@@ -27,7 +27,7 @@
 </Section>
 
 <div
-  class="w-full bg-dark-desaturated-blue text-light-greyish-green flex justify-center"
+  class="w-full bg-dark-desaturated-blue text-light-greyish-green flex justify-center px-8"
 >
   <div class="max-w-screen-xl w-full my-8">
     <div class="flex justify-between w-full my-8">
