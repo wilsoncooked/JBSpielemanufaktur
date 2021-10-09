@@ -1,18 +1,45 @@
-<script lang="ts">
-  import Nav from '$lib/nav.svelte'
+<script context="module" lang="ts">
+  import Nav from '$lib/components/Nav.svelte'
   import '../app.css'
+  import Client from '$lib/utils/client'
+
+  export async function load() {
+    const navigationLinks = await Client.getByUID(
+      'navigation_links',
+      'navigation',
+      {}
+    )
+    return {
+      props: {
+        navigationLinks
+      }
+    }
+  }
 </script>
 
-<Nav />
+<script>
+  export let navigationLinks
+</script>
 
-<main class="bg-blue-100">
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+</svelte:head>
+
+<Nav {navigationLinks} />
+
+<main class="bg-light-greyish-green font-mono tracking-wide">
   <!-- like React.Children -->
   <slot />
 </main>
 
 <footer />
 
-<style>
+<style global>
   @tailwind base;
   @tailwind components;
   @tailwind utilities;

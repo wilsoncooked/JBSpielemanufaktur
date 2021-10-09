@@ -1,6 +1,9 @@
 {
   "name": "my-app",
   "version": "0.0.1",
+  "type": "module",
+  "target": "esnext",
+  "module": "commonjs",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -11,6 +14,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@prismicio/client": "^5.1.0",
     "@sveltejs/kit": "next",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.24",
     "@types/cookie": "^0.4.1",
@@ -23,6 +27,7 @@
     "postcss": "^8.3.8",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
+    "prismic-dom": "^2.2.6",
     "svelte": "^3.34.0",
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.9.4",
@@ -30,12 +35,12 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "module",
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "@sveltejs/adapter-vercel": "next",
     "cookie": "^0.4.1",
+    "svelte-image": "^0.2.9",
     "svelte-scrollto": "^0.2.0"
   }
 }
