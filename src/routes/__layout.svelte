@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import Nav from '$lib/components/Nav.svelte'
+  import Nav from '$lib/components/nav.svelte'
   import '../app.css'
   import Client from '$lib/utils/client'
 
