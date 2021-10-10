@@ -8,21 +8,25 @@
 
 <Section id="about">
   {#if contentAbout}
-    <div class="pt-28 flex flex-col items-center">
+    <div class="pt-20 lg:pt-28 flex flex-col items-center">
       <div
-        class="text-center font-mono text-2xl pt-2 uppercase tracking-widest"
+        class="text-center font-mono text-2xl  py-2 uppercase tracking-widest"
       >
         {@html SerializedPrismicDOM(contentAbout.data.heading)}
       </div>
-      <div class="text-center font-mono text-2xl pb-2">
+      <div class="text-center font-mono text-xl sm:text-2xl  pb-6 lg:pb-8">
         {@html SerializedPrismicDOM(contentAbout.data.about)}
       </div>
-      <div class="flex justify-evenly py-8 w-full ">
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 gap-8 py-8 w-full max-w-2xl lg:max-w-full"
+      >
         {#each contentAbout.data.skills_icons as skill}
           <Skill {skill} />
         {/each}
       </div>
-      <div class="text-center font-mono  text-2xl py-10 max-w-screen-lg">
+      <div
+        class="text-center font-mono text-lg sm:text-xl lg:text-2xl py-10 max-w-screen-lg"
+      >
         {@html SerializedPrismicDOM(contentAbout.data.about_content)}
       </div>
       <div class="flex justify-center flex-wrap	pt-8">
@@ -32,7 +36,7 @@
             alt={image.image.alt}
             width={image.image.dimensions.width / 2}
             height={image.image.dimensions.height / 2}
-            class="object-contain p-1 h-96 w-min"
+            class="object-contain p-1 sm:h-64 lg:h-96 w-min"
           />
         {/each}
       </div>

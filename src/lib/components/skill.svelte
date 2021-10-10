@@ -4,23 +4,26 @@
   export let skill
 </script>
 
-<div class="flex flex-col items-center w-52">
+<div class="flex flex-col items-center">
   {#if skill}
-    <div class="py-3">
+    <div class="md:py-5">
       <img
         src={skill.icon.url}
         alt={skill.icon.alt}
         width={skill.icon.dimensions.width / 2}
         height={skill.icon.dimensions.height / 2}
-        class="h-24 object-contain"
+        class=" object-contain"
       />
     </div>
-    <span
-      class="font-mono text-center uppercase py-2 text-2xl leading-6 tracking-wider"
-      >{@html SerializedPrismicDOM(skill.heading)}</span
-    >
-    <span class="font-mono text-center py-2 leading-5 text-xl tracking-wider"
-      >{@html PrismicDom.RichText.asHtml(skill.body)}</span
-    >
+    <div class=" md:w-52">
+      <div
+        class="font-mono text-center uppercase py-1 sm:py-2 text-lg sm:text-2xl tracking-wider"
+      >
+        {@html SerializedPrismicDOM(skill.heading)}
+      </div>
+      <div class="font-mono text-center sm:py-2  sm:text-xl tracking-wider">
+        {@html PrismicDom.RichText.asHtml(skill.body)}
+      </div>
+    </div>
   {/if}
 </div>

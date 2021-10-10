@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
   import Nav from '$lib/components/navigation.svelte'
+  import MobileNav from '$lib/components/mobileNavigation.svelte'
   import '../app.css'
   import Client from '$lib/utils/client'
 
@@ -31,6 +32,7 @@
 </svelte:head>
 
 <Nav {navigationLinks} />
+<MobileNav {navigationLinks} />
 
 <main class="bg-light-greyish-green font-mono tracking-wide">
   <!-- like React.Children -->

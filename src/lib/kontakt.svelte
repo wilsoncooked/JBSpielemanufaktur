@@ -18,15 +18,17 @@
 </script>
 
 <Section id="kontakt">
-  <div class="pt-28  flex flex-col items-center -mb-12">
+  <div class="pt-20 lg:pt-28  flex flex-col items-center lg:-mb-12">
     <span class="text-center uppercase text-2xl tracking-widest">
       {@html SerializedPrismicDOM(contentKontakt.data.heading)}
     </span>
-    <span class="text-center font-mono text-2xl py-4">
+    <span class="text-center font-mono text-xl sm:text-2xl py-2">
       {@html PrismicDom.RichText.asHtml(contentKontakt.data.kontakt_content)}
     </span>
-    <div class="flex justify-center py-16 max-w-screen-lg w-full flex-shrink-0">
-      <div class="mr-16 mb-12 mt-2">
+    <div
+      class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center py-8 lg:py-16 max-w-screen-lg w-full flex-shrink-0"
+    >
+      <div class="mb-8 lg:mr-20  mt-2 w-40 lg:mt-3 lg:w-64 flex-shrink-0">
         <img
           src={contentKontakt.data.image.url}
           alt={contentKontakt.data.image.alt}
@@ -35,7 +37,7 @@
           class="rounded-full"
         />
       </div>
-      <div class="w-full max-w-screen-md">
+      <div class="w-full max-w-screen-sm">
         <form on:submit|preventDefault={onSubmit}>
           <div class="flex w-full">
             <div class="p-1.5 w-full">
@@ -49,7 +51,7 @@
                 value=""
                 placeholder={contentKontakt.data.vorname[0].text}
                 required
-                class="w-full bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
+                class="w-full bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
               />
             </div>
             <div class="p-1.5 w-full">
@@ -62,7 +64,7 @@
                 name="nachname"
                 value=""
                 placeholder={contentKontakt.data.nachname[0].text}
-                class="w-full bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono  font-bold text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
+                class="w-full bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono  font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
               />
             </div>
           </div>
@@ -77,7 +79,7 @@
               value=""
               placeholder={contentKontakt.data.email[0].text}
               required
-              class="bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl w-full hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
+              class="bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl w-full hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
             />
           </div>
           <div class="p-1.5">
@@ -91,13 +93,13 @@
               rows="4"
               value=""
               placeholder={contentKontakt.data.comment[0].text}
-              class="bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl w-full hover:bg-white  hover:bg-opacity-40 duration-100  focus:outline-none"
+              class="bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl w-full hover:bg-white  hover:bg-opacity-40 duration-100  focus:outline-none"
             />
           </div>
           <div class="p-1.5 flex justify-end">
             <button
               type="submit"
-              class="uppercase px-8 py-2 text-dark-desaturated-blue font-mono border-dark-desaturated-blue font-bold text-2xl tracking-wider hover:bg-opacity-40 border rounded-xl hover:bg-white duration-100  focus:outline-none"
+              class="uppercase px-8 py-2 text-dark-desaturated-blue font-mono border-dark-desaturated-blue font-bold text-xl lg:text-2xlß tracking-wider hover:bg-opacity-40 border rounded-xl hover:bg-white duration-100  focus:outline-none"
             >
               {contentKontakt.data.button_label[0].text}
             </button>

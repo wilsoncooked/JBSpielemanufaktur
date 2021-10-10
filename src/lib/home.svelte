@@ -3,6 +3,7 @@
   import { SerializedPrismicDOM } from '$lib/utils/helpers'
   import ArrowDown from './svg/arrowDown.svelte'
   import * as animateScroll from 'svelte-scrollto'
+  import JBLogo from '$lib/svg/logo.svelte'
 
   export let contentHome
 
@@ -16,7 +17,9 @@
 
 <Section id="">
   {#if contentHome}
-    <div class="h-screen pt-48 relative">
+    <div class="w-12 h-12 mt-4 lg:hidden"><JBLogo /></div>
+    <div class="h-screen pt-24 lg:pt-40 relative">
+      <div />
       <span class="hidden">
         {@html SerializedPrismicDOM(contentHome.data.company_name)}
       </span>
@@ -28,14 +31,14 @@
           src={contentHome.data.hero_image.url}
         />
         <div
-          class="absolute h-full flex items-center w-1/2  right-0 top-0 bottom-0 p-2 "
+          class=" lg:absolute lg:h-full lg:flex items-center lg:w-1/2  right-0 top-0 bottom-0 p-2 "
         >
-          <div class="font-medium text-5xl tracking-widest">
+          <div class="font-medium text-2xl lg:text-5xl tracking-widest">
             {@html SerializedPrismicDOM(contentHome.data.heading)}
           </div>
         </div>
       </div>
-      <div class="absolute flex justify-center w-full bottom-20">
+      <div class="absolute flex justify-center w-full bottom-16">
         <a
           href="#about"
           on:click={() => animateScroll.scrollTo({ element: `#about` })}
@@ -43,5 +46,5 @@
         >
       </div>
     </div>
-  {/if} d
+  {/if}
 </Section>
