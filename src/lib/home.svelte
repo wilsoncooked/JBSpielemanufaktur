@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="absolute flex justify-center w-full bottom-16">
+      <div class="absolute flex justify-center w-full bottom-40 md:bottom-20">
         <a
           href="#about"
           on:click={() => animateScroll.scrollTo({ element: `#about` })}
