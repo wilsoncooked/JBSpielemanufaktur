@@ -38,7 +38,12 @@
         />
       </div>
       <div class="w-full max-w-screen-sm">
-        <form on:submit|preventDefault={onSubmit}>
+        <form
+          action="https://formsubmit.co/sarahlouise125@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New submission!" />
+          <input type="hidden" name="_captcha" value="false" />
           <div class="flex w-full">
             <div class="p-1.5 w-full">
               <label for="vorname" class="hidden"
