@@ -36,7 +36,7 @@
           <JBLogo invert={true} />
         </div>
         <div
-          class="text-xl text-right sm:text-left sm:text-2xl lg:text-4xl  sm:ml-8 lg:ml-14 sm:mt-5 tracking-widest font-medium sm:max-w-lg lg:max-w-full"
+          class="text-xl text-right sm:text-left sm:text-2xl lg:text-3xl  sm:ml-8 lg:ml-12 sm:mt-5 tracking-widest font-bold sm:max-w-lg lg:max-w-xl"
         >
           {@html SerializedPrismicDOM(contentImpressum.data.footer_main_text)}
         </div>

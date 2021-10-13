@@ -16,11 +16,16 @@
       data[key] = value
     }
 
-    axios.defaults.headers.post['Content-Type'] = 'application/json'
-    axios
-      .post('https://formsubmit.co/ajax/your@email.com', data)
-      .then((response) => (formSubmittedSuccess = true))
-      .catch((error) => console.log(error))
+    formSubmittedSuccess = true
+    setTimeout(() => {
+      formSubmittedSuccess = false
+    }, 5000)
+
+    // axios.defaults.headers.post['Content-Type'] = 'application/json'
+    // axios
+    //   .post('https://formsubmit.co/ajax/info@JBSpielemanufaktur.de', data)
+    //   .then((response) => (formSubmittedSuccess = true))
+    //   .catch((error) => console.log(error))
   }
 </script>
 
@@ -46,7 +51,20 @@
       </div>
       <div class="w-full max-w-screen-sm">
         {#if formSubmittedSuccess}
-          <h3 class="font-mono text-2xl font-bold">Success!!!</h3>
+          <div class="duration-100 mt-8 object-contain">
+            <iframe
+              title="Cat gif"
+              src="https://giphy.com/embed/aNqEFrYVnsS52"
+              width="380"
+              height="230"
+              frameBorder="0"
+              class="giphy-embed"
+              allowFullScreen
+            />
+            <h3 class="font-mono  text-2xl my-2">
+              {contentKontakt.data.success[0].text}
+            </h3>
+          </div>
         {:else}
           <form on:submit={handleSubmit} method="POST">
             <input type="hidden" name="_subject" value="New submission!" />
@@ -62,7 +80,6 @@
                   name="vorname"
                   value=""
                   placeholder={contentKontakt.data.vorname[0].text}
-                  required
                   class="w-full bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
                 />
               </div>
@@ -90,7 +107,6 @@
                 name="email"
                 value=""
                 placeholder={contentKontakt.data.email[0].text}
-                required
                 class="bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl w-full hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
               />
             </div>
