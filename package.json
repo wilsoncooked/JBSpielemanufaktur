@@ -38,6 +38,7 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
+    "@okrad/svelte-progressbar": "^1.11.2",
     "@sveltejs/adapter-vercel": "next",
     "axios": "^0.19.2",
     "cookie": "^0.4.1",
