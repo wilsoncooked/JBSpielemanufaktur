@@ -16,16 +16,18 @@
       data[key] = value
     }
 
-    formSubmittedSuccess = true
-    setTimeout(() => {
-      formSubmittedSuccess = false
-    }, 5000)
+    // formSubmittedSuccess = true
 
-    // axios.defaults.headers.post['Content-Type'] = 'application/json'
-    // axios
-    //   .post('https://formsubmit.co/ajax/info@JBSpielemanufaktur.de', data)
-    //   .then((response) => (formSubmittedSuccess = true))
-    //   .catch((error) => console.log(error))
+    axios.defaults.headers.post['Content-Type'] = 'application/json'
+    axios
+      .post('https://formsubmit.co/ajax/info@JBSpielemanufaktur.de', data)
+      .then((response) => {
+        formSubmittedSuccess = true
+        setTimeout(() => {
+          formSubmittedSuccess = false
+        }, 5000)
+      })
+      .catch((error) => console.log(error))
   }
 </script>
 
@@ -92,6 +94,7 @@
                   id="nachname"
                   name="nachname"
                   value=""
+                  required
                   placeholder={contentKontakt.data.nachname[0].text}
                   class="w-full bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono  font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
                 />
@@ -106,6 +109,7 @@
                 id="email"
                 name="email"
                 value=""
+                required
                 placeholder={contentKontakt.data.email[0].text}
                 class="bg-transparent px-4 pt-2 pb-1.5 placeholder-dark-desaturated-blue font-mono font-bold text-xl lg:text-2xl tracking-wider border-dark-desaturated-blue border rounded-xl w-full hover:bg-white hover:bg-opacity-40 duration-100  focus:outline-none"
               />

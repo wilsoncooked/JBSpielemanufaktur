@@ -32,12 +32,12 @@
 <svelte:window on:scroll={handleScroll} />
 
 <div
-  class={`hidden md:block fixed left-0 right-0 top-0 lg:flex justify-center px-8 z-50`}
+  class={`hidden md:block fixed left-0 right-0 top-0 lg:flex justify-center px-8 z-40`}
 >
   <nav
     class={` grid grid-cols-5 lg:grid-cols-3 max-w-screen-xl w-full ${
       smallerNav ? 'duration-100 py-4 ' : 'duration-100 py-4	lg:py-8'
-    } z-50 text-2xl bg-gradient-to-b bg-light-greyish-green font-mono  text-dark-desaturated-blue  uppercase tracking-wider relative`}
+    } z-40 text-2xl bg-gradient-to-b bg-light-greyish-green font-mono  text-dark-desaturated-blue  uppercase tracking-wider relative`}
     id="navbar"
   >
     {#if navigationLinks}
@@ -55,7 +55,7 @@
         />
       </div>
       <div
-        class={`mx-auto absolute inset-x-auto z-50 ${
+        class={`mx-auto absolute inset-x-auto z-40 ${
           smallerNav ? 'top-2' : 'top-2'
         } ${
           smallerNav

@@ -10,7 +10,9 @@
     const contentImpressum = await Client.getByUID('impressum', 'impressum', {})
 
     return {
-      props: { contentHome, contentAbout, contentKontakt, contentImpressum }
+      props: { contentHome, contentAbout, contentKontakt, contentImpressum },
+      status: 302,
+      redirect: '/coming-soon'
     }
   }
 </script>
