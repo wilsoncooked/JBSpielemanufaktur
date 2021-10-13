@@ -31,12 +31,12 @@
 >
   <div class="max-w-screen-xl w-full my-4 lg:my-8">
     <div class="lg:flex justify-between w-full lg:my-8">
-      <div class="ml-2 flex mt-2 ">
+      <div class="ml-2 flex items-center md:items-start mt-2 ">
         <div class="w-24 h-24 flex-shrink-0">
           <JBLogo invert={true} />
         </div>
         <div
-          class="text-xl text-right sm:text-left sm:text-2xl lg:text-3xl  sm:ml-8 lg:ml-12 sm:mt-5 tracking-widest font-bold sm:max-w-lg lg:max-w-xl"
+          class="text-md xs:text-lg lg:text-xl mt-4 ml-4 xs:ml-8 lg:ml-8 xs:mt-12 tracking-widest font-bold max-w-xs md:max-w-md w-full"
         >
           {@html SerializedPrismicDOM(contentImpressum.data.footer_main_text)}
         </div>

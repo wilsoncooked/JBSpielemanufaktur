@@ -394,6 +394,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@okrad/svelte-progressbar@^1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@okrad/svelte-progressbar/-/svelte-progressbar-1.11.2.tgz#d96e535d4e121115281a38f6f49d37b2ae16ca7a"
+  integrity sha512-gL6EFher4l1FwJ+7N7U7bRemKiIa9vtNMOfez4/S5IBpcb8i7t94B+GyTdrXVfvF1hf2KesjxsyjPGNJ0VFW8Q==
+
 "@prismicio/client@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-5.1.0.tgz#f236d7fca09535d61e599872e7c38afda62b8b3c"
