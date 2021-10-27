@@ -58,7 +58,7 @@
             } rounded-full`}
           />
 
-          <a href=" "  class={`z-40 ${pageLoaded ? 'scale-100 opacity-100 duration-100': 'scale-0 opacity-0 duration-100'} ${smallerNav ? 'top-2' : 'top-2'} ${
+          <a href=" "  class={`z-40 ${pageLoaded ? 'scale-100 opacity-100 duration-50': 'scale-75 opacity-0 duration-50'} ${smallerNav ? 'top-2' : 'top-2'} ${
             smallerNav ? 'duration-100	w-12 h-12' : 'duration-100 h-16 w-16	lg:w-24 lg:h-24'
           } `}  on:click={() => animateScroll.scrollTo({ element: `#home` })}>
             <JBLogo />
