@@ -35,7 +35,6 @@
 <MobileNav {navigationLinks} />
 
 <main class="bg-light-greyish-green font-mono tracking-wide">
-  <!-- like React.Children -->
   <slot />
 </main>
 

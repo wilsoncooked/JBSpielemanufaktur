@@ -11,8 +11,6 @@
 
     return {
       props: { contentHome, contentAbout, contentKontakt, contentImpressum }
-      // status: 302,
-      // redirect: '/coming-soon'
     }
   }
 </script>

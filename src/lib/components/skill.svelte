@@ -17,7 +17,7 @@
     </div>
     <div class=" md:w-52">
       <div
-        class="font-mono text-center uppercase py-1 sm:py-2 text-lg sm:text-2xl tracking-wider"
+        class="font-mono text-center py-1 sm:py-2 text-lg sm:text-2xl tracking-wider"
       >
         {@html SerializedPrismicDOM(skill.heading)}
       </div>

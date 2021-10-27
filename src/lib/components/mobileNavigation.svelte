@@ -18,7 +18,7 @@
 <div
   class="fixed top-0 left-0 right-0 z-20 md:hidden flex justify-between items-center w-full bg-light-greyish-green pt-2 pb-4 px-4"
 >
-  <div class=" w-9 h-9 my-1"><JBLogo /></div>
+  <a class=" w-9 h-9 my-1" href=" "   on:click={() => animateScroll.scrollTo({ element: `#home` })}><JBLogo /></a>
   <button class="w-7 h-7 mb-2 mx-2" on:click={handleMenu}>
     {#if menuOpen}
       <Close />

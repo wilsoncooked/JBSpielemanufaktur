@@ -12,7 +12,7 @@
   {#if contentAbout}
     <div class="pt-20 lg:pt-28 flex flex-col items-center">
       <div
-        class="text-center font-mono text-2xl  py-2 uppercase tracking-widest"
+        class="text-center font-mono text-2xl  py-2 tracking-widest"
       >
         {@html SerializedPrismicDOM(contentAbout.data.heading)}
       </div>

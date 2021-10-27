@@ -33,7 +33,7 @@
 
 <Section id="kontakt">
   <div class="pt-20 lg:pt-28  flex flex-col items-center lg:-mb-12">
-    <span class="text-center uppercase text-2xl tracking-widest">
+    <span class="text-center text-2xl tracking-widest">
       {@html SerializedPrismicDOM(contentKontakt.data.heading)}
     </span>
     <span class="text-center font-mono text-xl sm:text-2xl py-2">
